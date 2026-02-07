@@ -1,7 +1,7 @@
 import type { ServerMod } from "./models/mod";
 import type { ServerModVersion } from "./models/mod-version";
 
-const BASE_URL = "https://api.geode-sdk.org";
+const BASE_URL = "https://api.noahh-sdk.org";
 
 export interface Paginated<T> {
     data: T[];
