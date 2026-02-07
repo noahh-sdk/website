@@ -1,4 +1,4 @@
-mport { getMods, type ModSearchParams } from "$lib/api/index-repository.js";
+import { getMods, type ModSearchParams } from "$lib/api/index-repository.js";
 import type { PageServerLoad } from "./$types.js";
 
 function toIntSafe(value: string | null) {
