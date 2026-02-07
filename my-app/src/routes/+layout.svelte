@@ -18,7 +18,7 @@
 <Waves type="bottom">
 	<Column>
 		<Row>
-			<Link href="https://discord.gg/WGUaDBdGkm" icon="discord">Discord</Link>
+			<Link href="https://discord.gg/SQAU3UreHs" icon="discord">Discord</Link>
 			<Dot/>
 			<Link href="https://twitter.com/NoahhSDK" icon="twitter">Twitter</Link>
 			<Dot/>
