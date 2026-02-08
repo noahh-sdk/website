@@ -22,7 +22,7 @@
 				<Dot/>
 				<Link href="https://twitter.com/NoahhSDK" icon="twitter">Twitter</Link>
 				<Dot/>
-				<Link href="https://docs.noahh-sdk.org/" icon="docs">Documentation</Link>
+				<Link href="https://noahh-sdk-docs.vercel.app/" icon="docs">Documentation</Link>
 				<Dot/>
 				<Link href="https://github.com/noahh-sdk" icon="github">Source Code</Link>
 			</Row>
