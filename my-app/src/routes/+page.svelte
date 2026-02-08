@@ -14,6 +14,8 @@
     import ShowcaseCollage from "$lib/components/ShowcaseCollage.svelte";
     import ModCollage from "$lib/components/ModCollage.svelte";
     import MoneyBox from "$lib/components/MoneyBox.svelte";
+    import { getServerStats } from "$lib/api/index-repository";
+    import LoadingCircle from "$lib/components/LoadingCircle.svelte";
 </script>
 
 <svelte:head>
@@ -50,9 +52,9 @@
 </div>
 <Image name="main-page" alt="The main page" style="shadow"></Image>
 <Row --link-color=var(--secondary-300)>
-    <Link href="https://discord.gg/9e43WMKzhp" icon="discord">Discord</Link>
+    <Link href="https://discord.gg/SQAU3UreHs" icon="discord">Discord</Link>
     <Dot --dot-color=var(--background-400)/>
-    <Link href="https://twitter.com/noahh_sdk" icon="twitter">Twitter</Link>
+    <Link href="https://twitter.com/NoahhSDK" icon="twitter">Twitter</Link>
     <Dot --dot-color=var(--background-400)/>
     <Link href="https://docs.noahh-sdk.org/" icon="docs">Documentation</Link>
     <Dot --dot-color=var(--background-400)/>
@@ -85,8 +87,12 @@
                 both users and modders, nearly every mod you can imagine has been made or suggested!
             </p>
             <Row>
-                <MoneyBox num={1854082} icon="download" text="downloads" />
-                <MoneyBox num={103} icon="graph" text="mods published" />
+                {#await getServerStats()}
+                    <LoadingCircle size="small"/><p>Loading stats...</p>
+                {:then stats} 
+                    <MoneyBox num={stats.total_noahh_downloads} icon="download" text="downloads" />
+                    <MoneyBox num={stats.total_mod_count} icon="graph" text="mods published" />
+                {/await}
             </Row>
         </Column>
     </FlyIntoView>
