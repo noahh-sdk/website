@@ -37,24 +37,3 @@
 		<button formaction="?/logout_all">Revoke all tokens</button>
 	</form>
 </fieldset>
-
-<div>
-	<h2>Your mods :)</h2>
-
-	<label for="status">Mod Status</label>
-	<select name="status" id="status" bind:value={status}>
-		<option value="accepted">Accepted</option>
-		<option value="pending">Pending</option>
-		<option value="rejected">Rejected</option>
-		<option value="unlisted">Unlisted</option>
-	</select>
-
-	<button on:click={onChangeFilter}>Update filter</button>
-
-	<div>
-		{#each data.mods as mod}
-			{@const version = mod.versions[0]}
-			{version.name}
-		{/each}
-	</div>
-</div>
