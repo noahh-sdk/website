@@ -29,7 +29,7 @@
 				</Row>
 				<p>
 					Site made by <Link href="https://github.com/nipfswd">NoahBajsToa</Link>.
-					Thank you to <Link href="porkbun.com">Porkbun</Link> for the domain!
+					Thank you to <Link href="https://github.com/nipfswd">Porkbun</Link> for the domain!
 				</p>
 				<Row gap=small>
 					<Icon icon="copyright"/> 
