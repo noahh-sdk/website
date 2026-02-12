@@ -19,7 +19,6 @@
     import LoadingCircle from "$lib/components/LoadingCircle.svelte";
     import Image from "$lib/components/Image.svelte";
     import InfoBox from "$lib/components/InfoBox.svelte";
-    import SideArt from "$lib/components/SideArt.svelte";
 
 	export let data: PageData;
 
@@ -108,8 +107,6 @@
 
 <Waves type="top" />
 <div class="side-art">
-	<SideArt side="left" />
-	<SideArt side="right" />
 </div>
 <Gap size="large" />
 
@@ -428,7 +425,7 @@
 				grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 			}
 		}
-		
+
 		&.list {
 			display: flex;
 			flex-direction: column;
