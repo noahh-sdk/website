@@ -55,7 +55,7 @@
 <Row --link-color=var(--secondary-300)>
     <Link href="https://discord.gg/SQAU3UreHs" icon="discord">Discord</Link>
     <Dot --dot-color=var(--background-400)/>
-    <Link href="https://twitter.com/NoahhSDK" icon="twitter">Twitter</Link> 
+    <Link href="https://twitter.com/NoahhSDK" icon="twitter">Twitter</Link>
     <Dot --dot-color=var(--background-400)/>
     <Link href="https://docs.noahh-sdk.org/" icon="docs">Documentation</Link>
     <Dot --dot-color=var(--background-400)/>
