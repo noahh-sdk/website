@@ -118,7 +118,7 @@
         </Column>
         <CodeExample code={`
             // Include Noahh headers
-            #include <Noahh/modify/MenuLayer.hpp>;
+            #include <Noahh/modify/MenuLayer.hpp>
             
             using namespace noahh::prelude;
             
