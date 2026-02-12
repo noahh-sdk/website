@@ -19,7 +19,7 @@ export const load: PageServerLoad = async ({ url }) => {
         sort: (url.searchParams.get("sort") as ModSort) ?? "downloads",
         featured: onlyIfTrue(url.searchParams.get("featured")),
         status: (url.searchParams.get("status") as ModStatus) ?? "accepted",
-        developer: url.searchParams.get("developer") ?? undefined,
+        gd: url.searchParams.get("gd") ?? undefined,
         per_page: toIntSafe(url.searchParams.get("per_page")) ?? 10,
     };
 
