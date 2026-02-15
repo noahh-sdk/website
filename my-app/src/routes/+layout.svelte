@@ -7,42 +7,45 @@
     import Dot from "$lib/components/Dot.svelte";
     import Waves from "$lib/components/Waves.svelte";
 	import Icon from "$lib/components/Icon.svelte";
-    import SideArt from "$lib/components/SideArt.svelte";
 </script>
 
 <main>
 	<div class="bg"/>
-	<SideArt side="left"/>
-	<SideArt side="right"/>
+	<div class="side-art left"/>
+	<div class="side-art right"/>
 	<slot/>
 	<nav>
 		<Button href=".." style="primary-filled-dark" icon="home">Home</Button>
 		<slot name="nav"/>
 	</nav>
-	<Waves type="bottom" --text-color=var(--text-950)>
-		<Column>
-			<Row>
-				<Link href="https://discord.gg/aKhJ7YyAk2" icon="discord">Discord</Link>
-				<Dot/>
-				<Link href="https://twitter.com/NoahhSDK" icon="twitter">Twitter</Link>
-				<Dot/>
-				<Link href="https://docs.noahh-sdk.org/" icon="docs">Documentation</Link>
-				<Dot/>
-				<Link href="https://github.com/noahh-sdk" icon="github">Source Code</Link>
-			</Row>
-			<p>
-				Site made by <Link href="https://github.com/hjfod">HJfod</Link>.
-				Thank you to <Link href="https://github.com/nekitdev">Nekit</Link> for the domain!
-			</p>
-			<Row gap=small>
-				<Icon icon="copyright"/> 
-				<p>Noahh Team 2024</p>
-			</Row>
-		</Column>
-	</Waves>
+	<div class="waves-bottom">
+		<Waves type="bottom" --text-color=var(--text-950)>
+			<Column>
+				<Row wrap="wrap" align="center">
+					<Link href="https://discord.gg/9e43WMKzhp" icon="discord">Discord</Link>
+					<Dot/>
+					<Link href="https://twitter.com/noahhSDK" icon="twitter">Twitter</Link>
+					<Dot/>
+					<Link href="https://docs.noahh-sdk.org/" icon="docs">Documentation</Link>
+					<Dot/>
+					<Link href="https://github.com/noahh-sdk" icon="github">Source Code</Link>
+				</Row>
+				<p>
+					Site made by <Link href="https://github.com/nipfswd">NoahBajsToa</Link>.
+					Thank you to <Link href="https://github.com/nipfswd">Porkbun</Link> for the domain!
+				</p>
+				<Row gap=small>
+					<Icon icon="copyright"/> 
+					<p>Noahh Team 2024</p>
+				</Row>
+			</Column>
+		</Waves>
+	</div>
 </main>
 
 <style lang="scss">
+	@use '$lib/styles/media-queries.scss' as *;
+
 	.bg {
 		background-image: url("$lib/assets/bgart.png");
         background-size: contain;
@@ -62,12 +65,43 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: var(--gap-large);
-		min-height: calc(100vh - var(--page-margin) * 2);
-		padding: var(--page-margin);
+		padding-top: 4rem;
 	}
 	nav {
 		position: fixed;
 		top: 1rem;
 		left: 1rem;
 	}
+
+	.waves-bottom {
+		min-width: 100%;
+	}
+
+    .side-art {
+        position: absolute;
+        z-index: -10;
+        width: 11rem;
+		top: 0;
+		bottom: 0;
+
+        background-image: url("$lib/assets/sideart.png");
+        background-size: contain;
+        background-repeat: repeat-y;
+
+        filter: drop-shadow(0px 0px 3rem color-mix(in srgb, var(--primary-700) 15%, transparent));
+        opacity: 100%;
+
+        &.left {
+            left: 0px;
+            transform: scaleX(-1);
+        }
+        &.right {
+            right: 0px;
+        }
+
+        display: none;
+		@include gt-md {
+            display: block;
+		}
+    }
 </style>
