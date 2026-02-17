@@ -106,8 +106,6 @@
 </svelte:head>
 
 <Waves type="top" />
-<div class="side-art">
-</div>
 <Gap size="large" />
 
 <h1>Browse Mods</h1>
@@ -127,12 +125,20 @@
 				>Windows</SelectButton>
 				<SelectButton
 					icon="mac"
-					selected={platforms.has('mac')}
+					selected={platforms.has('mac-arm')}
 					on:select={() => {
-						toggleSet(platforms, 'mac');
+						toggleSet(platforms, 'mac-arm');
 						updateSearch();
 					}}
-				>Mac</SelectButton>
+				>macOS (ARM)</SelectButton>
+				<SelectButton
+					icon="mac"
+					selected={platforms.has('mac-intel')}
+					on:select={() => {
+						toggleSet(platforms, 'mac-intel');
+						updateSearch();
+					}}
+				>macOS (x64)</SelectButton>
 				<SelectButton
 					icon="android"
 					selected={platforms.has('android64')}
@@ -150,7 +156,7 @@
 					}}
 				>Android (32-bit)</SelectButton>
 				<SelectButton
-					icon="mac"
+					icon="ios"
 					selected={platforms.has('ios')}
 					on:select={() => {
 						toggleSet(platforms, 'ios');
@@ -385,16 +391,6 @@
 	@media screen and (min-width: 830px) {
 		.content-separator {
         	grid-template-columns: 15rem max-content;
-		}
-	}
-
-	.side-art {
-		display: none;
-	}
-
-	@media screen and (min-width: 500px) {
-		.side-art {
-			display: block;
 		}
 	}
 
