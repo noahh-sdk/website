@@ -8,7 +8,7 @@
             },
             {
                 "question": "Who created Noahh?",
-                "answer": "Noahh is developed by a team of people, including [NoahBajsToa](https://github.com/Nipfswd/)"
+                "answer": "Noahh is developed by a team of people, including [NoahBajsToa](https://github.com/nipfswd/), and others."
             },
             {
                 "question": "Is Noahh Free?",
@@ -55,7 +55,7 @@
         "questions": [
             {
                 "question": "How do I manually install mods?",
-                "answer": "Locate your Geometry Dash folder, inside of which is a `Noahh` folder. There you can find a `mods` folder that contains all your Noahh mods. To manually install a mod, add the mods' `.noahh` files here."
+                "answer": "Locate your Geometry Dash folder, inside of which is a `noahh` folder. There you can find a `mods` folder that contains all your Noahh mods. To manually install a mod, add the mods' `.noahh` files here."
             }
         ]
     }

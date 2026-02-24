@@ -3,7 +3,7 @@ import type { ServerMod, ServerSimpleMod } from "./models/mod.js";
 import type { ModStatus, ServerModVersion } from "./models/mod-version.js";
 import type { ServerStats } from "./models/stats";
 
-const BASE_URL = "https://api.geode-sdk.org";
+const BASE_URL = "https://api.noahh-sdk.org";
 
 export interface Paginated<T> {
     data: T[];
@@ -316,7 +316,11 @@ export interface UpdateDeveloperBody {
     verified?: boolean;
 }
 
-export async function updateDeveloper(token: string, id: number, body: UpdateDeveloperBody) {
+export async function updateDeveloper(
+    token: string,
+    id: number,
+    body: UpdateDeveloperBody,
+) {
     const r = await fetch(`${BASE_URL}/v1/developers/${id}`, {
         headers: new Headers({
             Authorization: `Bearer ${token}`,
