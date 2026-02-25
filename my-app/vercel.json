@@ -3,5 +3,8 @@
     "env": {
       "VERCEL_NODE_VERSION": "22"
     }
+  },
+  "git": {
+    "deploymentEnabled": false
   }
 }
