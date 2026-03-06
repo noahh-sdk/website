@@ -67,7 +67,13 @@
 <h1>Install Noahh</h1>
 
 <Column>
+    <!-- TODO: MAKE THIS SECTION HIDDEN AND THE OTHER SECTIONS VISIBLE ON RELEASE -->
     <section>
+        <InfoBox type="warning">
+            Noahh is not yet out for Geometry Dash 2.206! Noahh will be released for 2.206 on June 22nd at 9 PM Swedish time.
+        </InfoBox>
+    </section>
+    <section class="hidden">
         <Column>
             <p><strong>Installation instructions</strong></p>
             <span style="color: var(--background-300)">
@@ -87,14 +93,8 @@
             </p>
         </Column>
     </section>
-    <section>
-        <Column>
-        <InfoBox type="warning">
-            Noahh is not yet out for Geometry Dash 2.206! Noahh will be released for 2.206 on June 22nd at 9 PM Swedish time.
-        </InfoBox>
-    </section>
-    <!-- TODO: REMOVE THIS HIDDEN CLASS AND DELETE THE ABOVE SECTION ON RELEASE -->
     <section class="hidden">
+        <Column>
             <div>Latest version: <em>{latestVersion}</em></div>
             {#if curPlatform === "unknown"}
                 <p>Couldn't auto detect your platform. You can download Noahh for your chosen platform below.</p> 
