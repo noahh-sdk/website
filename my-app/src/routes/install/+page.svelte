@@ -5,6 +5,7 @@
     import Gap from "$lib/components/Gap.svelte";
     import Icon from "$lib/components/Icon.svelte";
     import Image from "$lib/components/Image.svelte";
+    import InfoBox from "$lib/components/InfoBox.svelte";
     import Link from "$lib/components/Link.svelte";
     import Rollover from "$lib/components/Rollover.svelte";
     import Row from "$lib/components/Row.svelte";
@@ -88,6 +89,12 @@
     </section>
     <section>
         <Column>
+        <InfoBox type="warning">
+            Noahh is not yet out for Geometry Dash 2.206! Noahh will be released for 2.206 on June 22nd at 9 PM Swedish time.
+        </InfoBox>
+    </section>
+    <!-- TODO: REMOVE THIS HIDDEN CLASS AND DELETE THE ABOVE SECTION ON RELEASE -->
+    <section class="hidden">
             <div>Latest version: <em>{latestVersion}</em></div>
             {#if curPlatform === "unknown"}
                 <p>Couldn't auto detect your platform. You can download Noahh for your chosen platform below.</p> 
