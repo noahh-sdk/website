@@ -20,7 +20,7 @@
         ? `/mods/${mod.id}?version=${version.version}`
         : `/mods/${mod.id}`;
 
-    $: logo_url = IndexClient(mod.id).toString();
+    $: logo_url = new IndexClient(mod.id).toString();
 
     $: owner = mod.developers.filter(d => d.is_owner)[0];
 </script>
