@@ -71,6 +71,8 @@
     <section>
         <InfoBox type="warning">
             Noahh is not yet out for Geometry Dash 2.206! Noahh will be released for 2.206 on June 22nd at 9 PM Swedish time.
+            <br><br>
+            You can join <Link --link-color="var(--accent-300)" href="https://youtu.be/NOTDONE">the Premiere of our announcement video</Link> when the update releases!
         </InfoBox>
     </section>
     <section class="hidden">
