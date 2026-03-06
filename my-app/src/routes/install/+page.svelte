@@ -11,10 +11,13 @@
     import Row from "$lib/components/Row.svelte";
     import Waves from "$lib/components/Waves.svelte";
     import { onMount } from "svelte";
+    import type { PageData } from "./$types.js";
+
+    export let data: PageData;
 
     // Until server returns this, we're doing it manually
-    let latestVersion = "v3.3.1";
-    let latestLauncher = "v1.4.1";
+    let latestVersion = data.loader_tag;
+    let latestLauncher = `v${data.launcher_tag}`;
     let showAllPlatforms = false;
     let curPlatform: 'windows' | 'mac' | 'android' | 'linux' | 'unknown' | undefined = undefined;
 
@@ -72,7 +75,7 @@
         <InfoBox type="warning">
             Noahh is not yet out for Geometry Dash 2.206! Noahh will be released for 2.206 on June 22nd at 9 PM Swedish time.
             <br><br>
-            You can join <Link --link-color="var(--accent-300)" href="https://youtu.be/NOTDONE">the Premiere of our announcement video</Link> when the update releases!
+            You can join <Link --link-color="var(--accent-300)" href="https://youtu.be/RKwBBcHk6OA">the Premiere of our announcement video</Link> when the update releases!
         </InfoBox>
     </section>
     <section>
@@ -95,7 +98,18 @@
             </p>
         </Column>
     </section>
-    <section>
+    <section class:hidden={!data.error}>
+        <InfoBox type="error">
+            Could not determine the latest Noahh release.
+
+            <br /> <br />
+
+            You can download Noahh <Link --link-color="var(--accent-300)" href="https://github.com/noahh-sdk/noahh/releases/latest">here</Link>.
+            <br />
+            Android users should install <Link --link-color="var(--accent-300)" href="https://github.com/noahh-sdk/android-launcher/releases/latest">the Android launcher</Link> instead.
+        </InfoBox>
+    </section>
+    <section class:hidden={data.error}>
         <Column>
             <div>Latest version: <em>{latestVersion}</em></div>
             {#if curPlatform === "unknown"}
